@@ -1,43 +1,21 @@
 # 烂柯游艺社 lanke.fun
 
-The club website, hosted for free on GitHub Pages (Jekyll). Pushing to `main` publishes it in about a minute.
+The club website, hosted for free on GitHub Pages. It is a static copy of the old WordPress site (Astra theme + Elementor): the original HTML, CSS, JS, images and PDFs, at the same URLs. Pushing to `main` publishes it in about a minute. `.nojekyll` tells GitHub to serve the files as-is.
 
-## Editing
+Removed from the WordPress version because they need a server: login/register/member pages (now redirect to the homepage), the search box, comment forms, and Google Analytics. Video blocks get a small inline script so the YouTube players actually load (they were broken on the old site).
 
-You can edit any file right on github.com (pencil icon → "Commit changes"); no local setup needed.
+## Layout
 
 | What | Where |
 |---|---|
-| Top menu | `_data/menu.yml` |
 | Homepage | `index.html` |
-| Header / footer / contact email | `_layouts/default.html`, `_config.yml` |
-| Colors and fonts | `assets/style.css` |
-| A normal page (e.g. 通用角色) | `<page-name>/index.html` |
-| Match reports / news | `_posts/YYYY-MM-DD-<anything>.html` |
-| Images and PDFs | `wp-content/uploads/…` (kept at the old WordPress paths so old links still work) |
+| A page or post | `<url path>/index.html`, e.g. `general-characters/index.html`, `第一轮（4月30日）赛报/index.html` |
+| Report archive | `category/league-reports/` (+ `page/2..4/`) |
+| Images and PDFs | `wp-content/uploads/…` |
+| Theme / Elementor CSS and JS | `wp-content/themes/`, `wp-content/plugins/`, `wp-content/uploads/elementor/css/`, `wp-includes/` |
 
-### Add a match report
+## Editing
 
-Create `_posts/2026-11-02-round1.html`:
-
-```html
----
-title: 第一轮（11月1日）赛报
-categories: [league-reports]
-permalink: /第一轮（11月1日）赛报/
----
-<p>…content…</p>
-```
-
-Use `categories: [yuanyue2]` for 圆月大会 posts and `[lanke-news]` for news. Each post shows up automatically on its listing page (联赛战报 / 第二届圆月大会 / 活动).
-
-### Add a page
-
-Create `my-page/index.html` with a `title:` front matter block like the one above, and link to it from `_data/menu.yml` if it belongs in the menu.
-
-## Preview locally (optional)
-
-```sh
-gem install jekyll
-jekyll serve   # then open http://localhost:4000
-```
+- **Text on a page:** open its `index.html` (on github.com: pencil icon → "Commit changes") and edit the text inside the page body.
+- **The menu, header or footer** is repeated in every page, so change it with a find-and-replace across all `index.html` files.
+- **A new page or report:** copy an existing page's folder (e.g. a 赛报 folder), rename it, and replace the title and content.
