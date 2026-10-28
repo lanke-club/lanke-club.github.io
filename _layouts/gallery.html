@@ -1,0 +1,20 @@
+---
+layout: builder
+---
+{%- comment -%} The 角色图标 page: a 4-column gallery from _data/icons.yml with a click-to-enlarge lightbox. {%- endcomment -%}
+{%- capture figures -%}
+{%- for icon in site.data.icons -%}
+{%- assign thumb = icon.image | wp_size: 150 -%}
+{%- assign lk_images = lk_images | default: 0 | plus: 1 -%}
+{%- assign srcset = thumb | wp_srcset -%}
+<figure class='gallery-item'>
+<div class='gallery-icon landscape'>
+<a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="icons" data-elementor-lightbox-title="{{ icon.title | default: icon.caption }}" href='{{ icon.image }}'><img{% if lk_images > 3 %} loading="lazy"{% endif %} decoding="async" width="150" height="150" src="{{ thumb }}" class="attachment-thumbnail size-thumbnail" alt="" srcset="{{ srcset }}" sizes="{% if lk_images > 3 %}auto, {% endif %}(max-width: 150px) 100vw, 150px" /></a>
+</div>
+<figcaption class='wp-caption-text gallery-caption'>{{ icon.caption }}</figcaption></figure>
+{%- endfor -%}
+{%- endcapture -%}
+{%- capture inner %}<div class="elementor-image-gallery"><div class='gallery galleryid-987 gallery-columns-4 gallery-size-thumbnail'>{{ figures }}</div></div>{% endcapture -%}
+{%- capture ws %}{% include el/widget.html type="image-gallery" class="lk-gallery" inner=inner %}{% endcapture -%}
+{%- capture col %}{% include el/column.html content=ws %}{% endcapture %}
+{% include el/section.html content=col %}

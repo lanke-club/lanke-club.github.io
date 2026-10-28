@@ -1,0 +1,31 @@
+{%- comment -%}
+  One 版型 (setup) from _data/rulebook/<chapter>.yml:
+    id (anchor), number + name (heading "-01-<br>name"; `heading:` overrides it), lineup + order,
+    toc: name shown in the 目录 if different,
+    blocks: [{role: name} | any widget from sections.html], divider_before, divider (default true)
+{%- endcomment -%}
+{%- assign lk_setup = include.setup -%}
+{%- capture lk_sws -%}
+{%- if lk_setup.divider_before %}
+{% include el/divider.html %}
+{%- endif %}
+{% include el/anchor.html id=lk_setup.id %}
+{%- if lk_setup.heading %}{% assign lk_head = lk_setup.heading %}{% else %}{% capture lk_head %}-{% if lk_setup.number < 10 %}0{% endif %}{{ lk_setup.number }}-<br/>{{ lk_setup.name }}{% endcapture %}{% endif %}
+{% include el/heading.html text=lk_head tag="h3" class="lk-center" %}
+{%- if lk_setup.lineup %}
+{%- capture lk_cfg %}<p><strong>角色配置</strong>：{{ lk_setup.lineup | lkinline }}<br><strong>行动顺序</strong>：{{ lk_setup.order | lkinline }}</p>{% endcapture %}
+{% include el/text.html html=lk_cfg class="lk-center lk-ink" %}
+{%- endif %}
+{%- for lk_block in lk_setup.blocks %}
+{%- if lk_block.role %}
+{% include role-card.html name=lk_block.role %}
+{%- else %}{% assign lk_one = "" | split: "" | push: lk_block %}
+{% include widgets.html widgets=lk_one %}
+{%- endif %}
+{%- endfor %}
+{%- unless lk_setup.divider == false %}
+{% include el/divider.html %}
+{%- endunless %}
+{%- endcapture -%}
+{%- capture lk_scol %}{% include el/column.html content=lk_sws %}{% endcapture -%}
+{% include el/section.html content=lk_scol %}

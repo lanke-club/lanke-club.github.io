@@ -1,0 +1,413 @@
+page: /lanke-templates/
+title: 原创版型
+header_size: 16
+setups:
+- id: template43
+  number: 43
+  name: 预女猎小
+  lineup: 4 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [小女孩](#little-girl)
+  order: 普狼，预言家，女巫，猎人，小女孩
+  blocks:
+  - role: 小女孩
+- id: template44
+  number: 44
+  name: 预女猎白影
+  lineup: 4 [普狼](#werewolf)；3 [村民](#villager)，1 [影子](#shadow), 1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+  order: 影子，普狼，预言家，女巫，猎人，白痴
+  blocks:
+  - role: 影子
+- id: template45
+  number: 45
+  name: '<span style="color: var( --e-global-color-primary ); font-family: var( --e-global-typography-primary-font-family ), Sans-serif; font-size: 1.5625rem; font-weight: var( --e-global-typography-primary-font-weight );">幽灵 - 预女猎守</span>'
+  lineup: 1 [幽灵](#specter)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 幽灵，普狼和幽灵，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 幽灵
+  toc: 幽灵-预女猎守
+- id: template46
+  number: 46
+  name: 雪狼 - 预女猎公
+  lineup: 1 [雪狼](#snow-wolf)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [公爵](#duke)
+  order: 雪狼，狼人，预言家，女巫，猎人，公爵
+  blocks:
+  - role: 雪狼
+  - role: 公爵
+  toc: 雪狼-预女猎公
+- id: template47
+  number: 47
+  name: 侍僧 - 预女猎牧
+  lineup: 1 [侍僧](#acolyte)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [牧师](#pastor)
+  order: 牧师，被「侍奉」的普狼，普狼和侍僧，侍僧，预言家，女巫，猎人
+  blocks:
+  - role: 侍僧
+  - role: 牧师
+  toc: 侍僧-预女猎牧
+- id: template48
+  number: 48
+  name: 邪恶使徒 - 预女护守
+  lineup: 1 [邪恶使徒](#devil-disciple)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [护教军](#crusader)，1 [守卫](#guard)
+  order: 邪恶使徒，普狼和邪恶使徒，守卫，预言家，女巫，护教军
+  blocks:
+  - role: 邪恶使徒
+  - role: 护教军
+  toc: 邪恶使徒-预女护守
+- id: template49
+  number: 49
+  name: 巨人 - 预女猎精
+  lineup: 1 [巨人](#giant)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [小精灵](#fairy)
+  order: 巨人，普狼和巨人，预言家，女巫，猎人，小精灵
+  blocks:
+  - text: |-
+      **异常状态：**
+      **「惊恐」状态**
+      处于「惊恐」状态的玩家白天发言时间减至30秒，投票效力减至0.5票。警长竞选开始前和白天公布死亡信息前，上帝公布处于「惊恐」状态的玩家号码。
+      **「惊喜」状态**
+      处于「惊喜」状态的玩家夜间在小精灵行动时睁眼并与其交流信息。
+    class: lk-ink
+  - role: 巨人
+  - role: 小精灵
+  toc: 巨人-预女猎精
+- id: template50
+  number: 50
+  name: 年兽 - 预女猎门
+  lineup: 1 [年兽](#nian)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [门神](#menshen)
+  order: 年兽，普狼和年兽，门神，预言家，女巫，猎人
+  blocks:
+  - role: 年兽
+  - role: 门神
+  toc: 年兽-预女猎门
+- id: template51
+  number: 51
+  name: '红狼王 - 预女猎主<br/><span style="font-weight: normal;">烂柯游艺社第一届原创角色设计大赛 · 特等奖<br/>设计者：陈沧皓</span>'
+  lineup: 1 [红狼王](#red-wolf-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [红衣主教](#cardinal)
+  order: 红衣主教，红狼王，普狼和红狼王，预言家，女巫，猎人
+  blocks:
+  - role: 红狼王
+  - role: 红衣主教
+  toc: 红狼王-预女猎主
+- id: template52
+  number: 52
+  name: '六耳猕猴 - 预女圣僧<br/><span style="font-weight: normal;">烂柯游艺社第一届原创角色设计大赛 · 一等奖<br/>设计者：</span><span style="font-weight: 400;">胡泾莓，宋弘浩</span>'
+  lineup: 1 [六耳猕猴](#fake-monkey-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [齐天大圣](#monkey-king)，1 [唐僧](#tangseng)
+  order: 普狼和六耳猕猴，齐天大圣，六耳猕猴，预言家，女巫，唐僧
+  blocks:
+  - role: 六耳猕猴
+  - role: 齐天大圣
+  - role: 唐僧
+  toc: 六耳猕猴-预女圣僧
+- id: template53
+  number: 53
+  name: '冥狼 - 预女猎祭<br/><span style="font-weight: normal;">烂柯游艺社第一届原创角色设计大赛 · 一等奖<br/>设计者：陈沧皓</span>'
+  blocks:
+  - text: |-
+      **角色配置**：1 [冥狼](#underworld-wolf)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [祭司](#priest)
+      **行动顺序**：普狼和冥狼，冥狼，祭司，预言家，女巫，猎人
+      **特殊说明**：本版型须设置第二现场，参见《法典》第二十七条。
+    class: lk-center lk-ink
+  - role: 冥狼
+  - role: 祭司
+  toc: 冥狼-预女猎祭
+- id: template54
+  number: 54
+  name: '吞星者 - 预女猎夜<br/><span style="font-weight: normal;">烂柯游艺社第一届原创角色设计大赛 · 二等奖<br/>设计者：</span><span style="font-weight: 400;">刘鹿</span>'
+  lineup: 1 [吞星者](#planet-eater)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守夜人](#night-watcher)
+  order: 吞星者，普狼和吞星者，预言家，女巫，猎人，守夜人
+  blocks:
+  - text: |-
+      **异常状态：**
+      **「日食」状态**
+      白天死亡信息公布后，上帝公布处于「日食」状态的玩家号码，然后该玩家当天不可以投票。
+      **「月食」状态**
+      夜间，若处于「月食」状态的玩家为神，则该神行动时，上帝告知其处于「月食」状态，然后该神当夜不可以发动技能。
+    class: lk-ink
+  - role: 吞星者
+  - role: 守夜人
+  toc: 吞星者-预女猎夜
+- id: template55
+  number: 55
+  name: '巫医 - 预女猎士<br/><span style="font-weight: normal;">烂柯游艺社第一届原创角色设计大赛 · 二等奖<br/>设计者：华伋</span>'
+  lineup: 1 [巫医](#witch-doctor)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [术士](#warlock)
+  order: 巫医，普狼和巫医，术士，预言家，女巫，猎人
+  blocks:
+  - role: 巫医
+  - role: 术士
+  toc: 巫医-预女猎士
+- id: template56
+  number: 56
+  name: '偷情者与捉奸人<br/><span style="font-weight: normal;">烂柯游艺社第一届原创角色设计大赛 · 二等奖<br/>设计者：</span><span style="font-weight: 400;">邓默，周奕纯</span>'
+  blocks:
+  - text: |-
+      **角色配置**：4 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+      **行动顺序**：捉奸人，偷情者，狼人，预言家，女巫，猎人，白痴，捉奸人，偷情者
+      **第三方阵营**：偷情者，捉奸人
+      **特殊说明**：[偷情者](#cheater)和[捉奸人](#cheat-catcher)均不是初始身份，不在十二张身份牌中。第一夜开始时，上帝随机指定一名玩家成为第一名捉奸人，然后由其指定另一名玩家成为第一名偷情者。
+    class: lk-center lk-ink
+  - role: 偷情者
+  - role: 捉奸人
+  - text: |-
+      **胜负判定**：
+      （1）在至少有一名非第三方狼存活的情况下，若所有神和第三方玩家死亡，或所有民和第三方玩家死亡，则狼人阵营获胜。
+      （2）若所有存活的玩家均为好人，则好人阵营获胜。
+      （3）若所有存活的玩家均为第三方，则第三方阵营获胜。
+    class: lk-ink
+  toc: 偷情者与捉奸人
+- id: template57
+  number: 57
+  name: '利维坦-预女猎思<br/><span style="font-weight: normal;">烂柯游艺社第二届原创角色设计大赛 · 特等奖<br/>设计者：</span><span style="font-weight: 400;">胡雨章，陈沧皓</span>'
+  lineup: 1 [利维坦](#leviathan)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [沉思者](#thinker)
+  order: 普狼和利维坦，预言家，女巫，猎人，沉思者
+  blocks:
+  - role: 利维坦
+  - role: 沉思者
+  toc: 利维坦-预女猎思
+- id: template58
+  number: 58
+  name: '怪人<br/><span style="font-weight: normal;">烂柯游艺社第二届原创角色设计大赛 · 一等奖<br/>设计者：</span><span style="font-weight: 400;">陈沧皓</span>'
+  blocks:
+  - anchor: weirdo   # 怪人 (laid out as separate blocks, not a role card)
+  - text: |-
+      **角色配置**：4 [普狼](#werewolf)，1 [怪人](#weirdo)；3 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+      **行动顺序**：怪人，普狼，守卫，预言家，女巫，猎人
+      **第三方阵营**：怪人
+    class: lk-center lk-ink
+  - image: /assets/img/roles/怪人.png
+  - text: '*你以为这很容易?*'
+    class: lk-center
+  - text: |-
+      **怪人 · 民**
+      【偏执】若你被放逐，则第三方立即获胜。当你被预言家「查验」时，上帝告知预言家你为好人。
+    class: lk-ink
+  - text: |-
+      胜负判定：
+      （1）当所有神死亡，或所有民死亡时，若第三方阵营没有获胜，则狼人阵营获胜。
+      （2）若所有狼死亡，则好人阵营获胜。
+      （3）若怪人被放逐，则第三方阵营获胜。
+      \
+      和局条件:
+      若连续两个夜间和白天，或连续两个白天和夜间，均出现下述情况，则上帝宣判和局:
+      （1）夜间狼人行动时没有「刀杀」任何对象，且此夜最终形成平安夜。
+      （2）白天因放逐投票连续平票而没有放逐任何玩家，形成平安日。
+    class: lk-ink
+  toc: 怪人
+- id: template59
+  number: 59
+  heading: '-59-<br/>狼父狼子-预女猎教<br/>
+
+    <span style="font-weight: normal;">烂柯游艺社第二届原创角色设计大赛 · 一等奖<br/>设计者： 余天一，王孟宸，宋弘浩</span>
+
+    <br/> <span style="font-weight: normal;">版型别称：以父之名</span>'
+  blocks:
+  - text: |-
+      **角色配置**：1 [狼父](#wolf-father)，1 [狼子](#wolf-son)，2 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [教父](#godfather)
+      **行动顺序**：狼父，普狼和狼父，教父，预言家，女巫，猎人
+      **特殊说明**：本版型只能在网络空间内进行游戏。
+    class: lk-center lk-ink
+  - role: 狼父
+  - role: 狼子
+  - role: 教父
+  toc: 狼父狼子-预女猎教
+- id: template60
+  number: 60
+  heading: '-60-<br/>食尸鬼-预女猎流<br/>
+
+    <span style="font-weight: normal;">烂柯游艺社第二届原创角色设计大赛 · 二等奖<br/>设计者： 陈沧皓</span>'
+  lineup: 1 [食尸鬼](#ghoul)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [流浪汉](#stray)
+  order: 普狼和食尸鬼，食尸鬼，预言家，女巫，猎人，流浪汉
+  blocks:
+  - role: 食尸鬼
+  - role: 流浪汉
+  toc: 食尸鬼-预女猎流
+- id: template61
+  number: 61
+  heading: '-61-<br/>幻术师-预女护守<br/>
+
+    <span style="font-weight: normal;">烂柯游艺社第二届原创角色设计大赛 · 二等奖<br/>设计者： 华伋</span>'
+  lineup: 1 [幻术师](#illusionist)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [护教军](#crusader)，1 [守卫](#guard)
+  order: 普狼和幻术师，幻术师，守卫，预言家，女巫，护教军
+  blocks:
+  - role: 幻术师
+  - html: |-
+      <p><font color="#000000">注：若放逐投票后「傀儡」效果生效，则护教军【救赎】技能的发动时机在上帝公布「傀儡」之后，对象为「傀儡」。</font></p><font color="#000000">
+      </font></font></p>
+  toc: 幻术师-预女护守
+- id: template62
+  number: 62
+  heading: '-62-<br/>AI狼<br/>
+
+    <span style="font-weight: normal;">烂柯游艺社第二届原创角色设计大赛 · 二等奖<br/>设计者： 郑莉</span>'
+  lineup: 1 [AI狼](#ai-wolf)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [科学家](#scientist)
+  order: 科学家，AI 狼，普狼，预言家，女巫，猎人
+  blocks:
+  - role: AI狼
+  - role: 科学家
+  toc: AI狼-预女猎科
+- id: template63
+  number: 63
+  name: '虎 vs. 预女猎龙<span style="font-weight: normal;"><br/>设计者： 余天一，侯天麒</span>'
+  lineup: 1 [虎](#tiger)；3 [普狼](#werewolf)；4 [村民](#villager)，1 [熊](#template18)；1 [女巫](#witch)，1 [猎人](#hunter)，1 [龙](#dragon)
+  order: 虎，普狼，女巫，熊，猎人，龙
+  blocks:
+  - role: 虎
+  - role: 龙
+  toc: 虎 vs. 预女猎龙
+- id: template64
+  number: 64
+  name: '变脸师<br/><span style="font-weight: normal;">烂柯游艺社第三届原创角色设计大赛 · 特等奖<br/></span><span style="font-weight: 400;">设计者：杨衣容</span>'
+  lineup: 2大狼，2普狼；3村民，1预言家，1女巫，1猎人，1守卫；1变脸师
+  order: 普狼一与大狼一，普狼二与大狼二，变脸师，大狼一（【追踪】技能），大狼二（【追踪】技能），守卫，预言家，女巫，猎人
+  blocks:
+  - role: 变脸师
+  - text: '*坚毅的容貌无法被改变。*'
+    class: lk-center
+  - html: '<p><font color="#000000"><b>大狼 · 狼</b></font><br><font color="#000000">【追踪】全局游戏限一次。夜间，若同队普狼成为第三方，则上帝告知你该玩家号码，你可以「追</font><span style="color: rgb(0, 0, 0); font-style: inherit; font-weight: inherit; font-family: var( --e-global-typography-text-font-family ), Sans-serif;">踪」该目标，上帝每夜告诉你该玩家的身份。</font><br><font color="#000000">【首领】你不可以自刀，不可以「自爆」。</font><br><font color="#000000">【坚毅】每一夜入夜，你重新得知所有狼人的号码。若你成为「易容」对象，则此次「易容」失</font><span style="color: rgb(0, 0, 0); font-style: inherit; font-weight: inherit; font-family: var( --e-global-typography-text-font-family ), Sans-serif;">效。</span><br><font color="#000000">【狼刀】夜间，你和同队存活的普狼行动时,可以「刀杀」一名存活的玩家。奇数夜“狼队一”刀杀，</font><span style="color: rgb(0, 0, 0); font-style: inherit; font-weight: inherit; font-family: var( --e-global-typography-text-font-family ), Sans-serif;">偶数夜“狼队二”刀杀。每一夜，上帝告诉两个狼队具体的刀口。若一队普狼死亡，则由同一队的大</span><span style="color: rgb(0, 0, 0); font-style: inherit; font-weight: inherit; font-family: var( --e-global-typography-text-font-family
+      ), Sans-serif;">狼刀杀。若同一队两只狼人都死亡，则无论奇偶夜，由另一队进行刀杀。若另一队仅存的普狼死</span><span style="color: rgb(0, 0, 0); font-style: inherit; font-weight: inherit; font-family: var( --e-global-typography-text-font-family ), Sans-serif;">亡，则由最后一只大狼刀杀。</span></p>'
+  - text: |-
+      胜负判定：
+      （1）当所有神或所有民死亡时，若第三方存活，则第三方阵营获胜，否则狼人阵营获胜。
+      （2）当所有狼死亡时，若第三方存活，则第三方阵营获胜，否则好人阵营获胜。
+
+      注：
+      （1）”全局游戏限一次的技能”的技能只能发动一次。如女巫使用毒药后，下一个获得女巫身份的玩家便不能使用毒药。女巫于获得身份时得知拥有的解药、毒药信息。守卫于获得身份时得知前一夜守护信息。
+      （2）【坚毅】不会得知狼人的身份。【坚毅】技能触发后，上帝告知变脸师【易容】失效。
+    class: lk-ink
+  toc: 变脸师
+- id: template65
+  number: 65
+  name: '猫<br/><span style="font-weight: normal;">烂柯游艺社第三届原创角色设计大赛 · 一等奖<br/></span><span style="font-weight: 400;">设计者：陈沧皓</span>'
+  blocks:
+  - anchor: cheater
+  - text: |-
+      **角色配置**：4普狼；1猫；3村⺠，1预言家，1女巫，1猎人，1守卫
+      **行动顺序**：猫，普狼，守卫，预言家，女巫，猎人
+      第三方阵营：猫
+    class: lk-center lk-ink
+  - text: '*喵。*'
+    class: lk-center
+  - text: |-
+      **猫**
+      【夜魅】从第二夜开始，夜间，你行动时，可以「跳跃」一个非村⺠⻆色，全局游戏每个⻆色限选一次。你闭眼后，上帝秘密告知被「跳跃」的⻆色玩家当夜行动时不可以睁眼。然后，当夜此⻆色的行动环节内，你睁眼代替其接收上帝信息并做出行动决定。
+    class: lk-ink
+  - text: |-
+      注：
+      （1）猫不是神，不是⺠，也不是狼。
+      （2）猫可以代替一名玩家发动其⻆色全局游戏限一次的技能，之后该玩家不可以再发动 此技能。
+      （3）即使被「跳跃」的⻆色玩家已经死亡，猫仍然可以在其行动环节内行动并发动其技 能。
+      （4）猫「跳跃」尚未使用「解药」的女巫后，若当夜「刀杀」对象为女巫，则上帝告知 猫不可以使用「解药」;若不为女巫，则上帝告知猫可以使用「解药」。
+      （5）若猫或守卫选择的「守护」对象上一夜被「守护」，则上帝告知猫或守卫不可以 「守护」此玩家，然后猫或守卫可以改变「守护」对象。
+      （6）猫「跳跃」猎人后，当夜若猎人死亡，则猎人不可以发动【神枪】;若猫死亡，则 猫也不可以发动【神枪】。
+
+      胜负判定:
+      （1）若所有神死亡，或所有⺠死亡，则狼人阵营获胜。
+      （2）若所有狼死亡，则好人阵营获胜。
+      （3）若猫存活，且白天某一个时刻场上存活的神、⺠、狼数量相等，则第三方阵营获胜。
+
+      和局条件：若连续两个夜间和白天，或连续两个白天和夜间，均出现下述情况，则上帝宣判和局：（1）夜间狼人行动时没有「刀杀」任何对象，且此夜最终形成平安夜。（2）白天因放逐投票连续平票而没有放逐任何玩家，形成平安日。
+    class: lk-ink
+  toc: 猫
+- id: template66
+  number: 66
+  name: '鬼蜘蛛<br/><span style="font-weight: normal;">烂柯游艺社第三届原创角色设计大赛 · 一等奖<br/></span><span style="font-weight: 400;">设计者：陈沧皓</span>'
+  blocks:
+  - anchor: cheater
+  - text: |-
+      **角色配置**：1⻤蜘蛛，3普狼；4村⺠，1预言家，1女巫，1猎人，1守卫
+      **行动顺序**：⻤蜘蛛，⻤蜘蛛和普狼，守卫，预言家，女巫，猎人
+    class: lk-center lk-ink
+  - text: '*别费力气了。*'
+    class: lk-center
+  - text: |-
+      **⻤蜘蛛 · 狼**
+      【狼刀】夜间，你和其他存活的狼人行动时，可以「刀杀」一名存活的玩家。
+      【首领】你不可以成为「刀杀」对象，也不可以「自爆」。
+      【魔网】全局游戏限一次。夜间，你单独行动时，可以「笼罩」若干名存活的玩家，「笼罩」数量上限为此时存活的普狼数。若被「笼罩」的玩家当夜成为任何神发动技能的对象， 则该玩家「触网」。下一个夜间，你单独行动时，上帝告知你「触网」玩家的号码，然后 你可以「毒杀」其中任意数量的玩家。
+    class: lk-ink
+  toc: 鬼蜘蛛
+- id: template67
+  number: 67
+  name: '邪神 vs. 圣徒<br/><span style="font-weight: normal;">烂柯游艺社第三届原创角色设计大赛 · 二等奖<br/></span><span style="font-weight: 400;">设计者：宋彦轲</span>'
+  blocks:
+  - anchor: cheater
+  - text: |-
+      **角色配置**：1邪神，3普狼；4村民，1预言家，1女巫，1猎人，1圣徒
+      **行动顺序**：邪神，圣徒，普狼，预言家，女巫，猎人
+    class: lk-center lk-ink
+  - text: |-
+      **异常状态：「献祭」关系**
+      此关系包括「献祭者」和「被献祭者」 。除非「献祭者」被毒杀，否则当「献祭者」即将死亡时，若「被献祭者」存活，则「献祭者」不会死亡，且上帝公布「被献祭者」的号码。
+
+      注：不同的「献祭」关系中存在各自独立的「献祭者」和「被献祭者」 。
+    class: lk-ink
+  - text: '*出我先出他*'
+    class: lk-center
+  - text: |-
+      **邪神 · 狼**
+      【觉醒】你不可以「自爆」。其他狼人全部死亡后，你获得技能【狼刀】。
+      【血祭】全局游戏限一次，夜间，你单独行动时，可以「献祭」一名存活的玩家。你成为「献祭者」，该玩家成为「被献祭者」。
+      【血噬】全局游戏限一次，夜间，你单独行动时，可以选择一名玩家，立即解除其所有异常状态。
+    class: lk-ink
+  - text: '*出她先出我*'
+    class: lk-center
+  - text: |-
+      **圣徒 · 神**
+      【圣祭】全局游戏限一次，夜间，你行动时，可以将自己「献祭」给一名存活的玩家。你成为「被献祭者」，该玩家成为「献祭者」 。
+      【圣礼】全局游戏限一次，夜间，你单独行动时，可以选择一名玩家，立即解除其所有异常状态。
+    class: lk-ink
+  toc: 邪神 vs. 圣徒
+- id: template68
+  number: 68
+  name: '复仇女神 vs. 雅典娜<br/><span style="font-weight: normal;">烂柯游艺社第三届原创角色设计大赛 · 二等奖<br/></span><span style="font-weight: 400;">设计者：胡雨章</span>'
+  blocks:
+  - anchor: cheater
+  - text: |-
+      **角色配置**：3复仇女神（埃里倪斯），1普狼；4村民，1预言家，1女巫，1猎人，1雅典娜
+      **行动顺序**：普狼，埃里倪斯一，埃里倪斯二，埃里倪斯三，预言家，女巫，猎人
+    class: lk-center lk-ink
+  - text: |-
+      *我们将追踪他们，直到他进入地狱，一死也难逃惩处！*
+      *“Such we haunt, till beneath Earth he pass. Nay, in death he shall still be none too free!” (The Eumenides, Or The Kindly Goddesses. Lines 330-340.) *
+    class: lk-center
+  - text: |-
+      **复仇女神(Erinyes) · 狼**
+      【血仇】从第二夜开始，你可以「标记」一名存活玩家。若所有当夜发动「血仇」的埃里倪斯「标记」同一名玩家，则该玩家成为「击杀」对象。其后，上帝随机决定一名埃里倪斯当夜失去身份底牌，重新获得一张普狼牌，并获知所有埃里倪斯的号码。
+      【首领】你不可以成为「刀杀」对象，也不可以「自爆」。
+      【魔隐】夜间，你单独行动时，上帝告知你存活的普狼号码。普狼单独行动时，上帝告知其所有埃里倪斯的号码。
+    class: lk-ink
+  - image: /assets/img/roles/雅典娜.png
+  - text: |-
+      *阿提卡人民，请听我的法规！*
+      *“Hear now my ordinance, people of Athens.” (The Eumenides, Or The Kindly Goddesses. Lines 680-720.) *
+    class: lk-center
+  - text: |-
+      **雅典娜(Athena) · 神**
+      【审判】每天限一次，白天发言阶段。你可以于任意玩家发言结束后，翻开底牌并念出“阿提卡人民， 请听我的法规”。若如此做，你可以召开一场审判并召集两名其他存活玩家成为审判对象。审判对象 依照当天的发言顺序依次发言。发言结束后，你可以有 30 秒总结「陈词」。陈词结束后，对该两名 玩家进行一次放逐投票(警长可以归票)。「审判」过程中，你的投票增多 0.5 票的效力。审判结 束后回到之前的发言阶段继续发言。「审判」过程中不能自爆。被「审判」放逐的玩家没有遗言。
+      【神力】若你死亡，则你可以翻开此身份牌。若如此做，则你不再参与人间事务。其后，你可以继续留在游戏现场，召开「审判」，但不可以发言、陈词、投票，若你是警长，则警徽流失。
+    class: lk-ink
+  toc: 复仇女神 vs. 雅典娜
+- id: template69
+  number: 69
+  name: '盗梦幽灵 vs. 驱鬼师<br/><span style="font-weight: normal;">烂柯游艺社第三届原创角色设计大赛 · 二等奖<br/></span><span style="font-weight: 400;">设计者：赵乖巧</span>'
+  blocks:
+  - anchor: cheater
+  - text: |-
+      **角色配置**：1盗梦幽灵，3普狼；4村民，1预言家，1女巫，1猎人，1驱鬼师
+      **行动顺序**：盗梦幽灵，驱鬼师，普狼和盗梦幽灵，预言家，女巫，猎人
+    class: lk-center lk-ink
+  - text: '*你猜这里是现实还是梦境？*'
+    class: lk-center
+  - text: |-
+      **盗梦幽灵 · 狼**
+      【盗梦】从第二夜开始，夜间，你单独行动时，可以「盗梦」一名存活的玩家。被「盗梦」的玩家当夜将执行上一夜的行动（上帝不会告知被「盗梦」的玩家）。你不可以「盗梦」已经「盗梦」过的玩家。
+      【首领】你不可以成为「刀杀」对象，也不可以「自爆」。
+    class: lk-ink
+  - text: '*破碎吧，不切实际的梦*'
+    class: lk-center
+  - text: |-
+      **驱鬼师 · 神**
+      【驱鬼】「盗梦」对你无效。从第二夜开始，夜间，你单独行动时，可以「驱鬼」一名存活的玩家。被「驱鬼」的玩家当夜不受「盗梦」的影响。你不可以「驱鬼」上一夜之前已经「驱鬼」过的玩家。若你连续两夜「驱鬼」同一名玩家，若该玩家是狼人，则该玩家死亡；若该玩家是好人，则你死亡。
+    class: lk-ink
+  - text: |-
+      注：
+      （1）被「盗梦」的猎人可以翻牌，但开枪无效。
+      （2）被「盗梦」的女巫若当夜使用解药或毒药，则该药未消耗。
+    class: lk-ink
+  toc: 盗梦幽灵 vs. 驱鬼师

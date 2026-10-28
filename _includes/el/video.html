@@ -1,0 +1,15 @@
+{%- comment -%} YouTube video. The player is embedded by assets/js/video.js (on click when there is a cover image). {%- endcomment -%}
+{%- capture lk_inner -%}
+<div class="elementor-wrapper elementor-open-inline">
+<div class="elementor-video"></div>{% if include.cover %} <div class="elementor-custom-embed-image-overlay" style="background-image: url({{ include.cover }});">
+<div class="elementor-custom-embed-play" role="button" aria-label="Play Video" tabindex="0">
+<i aria-hidden="true" class="eicon-play"></i> <span class="elementor-screen-only">Play Video</span>
+</div>
+</div>{% endif %}
+</div>
+{%- endcapture -%}
+<div class="elementor-element elementor-widget elementor-widget-video lk-video" data-element_type="widget" data-youtube="{{ include.url }}">
+<div class="elementor-widget-container">
+{{ lk_inner }}
+</div>
+</div>

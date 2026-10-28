@@ -1,0 +1,325 @@
+page: /extention-templates/
+title: 扩展版型
+header_size: 16
+setups:
+- id: template17
+  number: 17
+  name: 狐女猎白
+  lineup: 4 [普狼](#werewolf)；4 [村民](#villager)，1 [狐狸](#fox)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+  order: 普狼，狐狸，女巫，猎人，白痴
+  blocks:
+  - role: 狐狸
+- id: template18
+  number: 18
+  name: 熊女猎白
+  lineup: 4 [普狼](#werewolf)；4 [村民](#villager)，1 [熊](#bear)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+  order: 普狼，女巫，猎人，熊，白痴
+  blocks:
+  - role: 熊
+- id: template19
+  number: 19
+  name: 先女猎白
+  lineup: 4 [普狼](#werewolf)；4 [村民](#villager)，1 [先知](#prophet)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+  order: 普狼，先知，女巫，猎人，白痴
+  blocks:
+  - role: 先知
+- id: template20
+  number: 20
+  name: 预女猎守野
+  lineup: 4 [普狼](#werewolf)；3 [村民](#villager)，1 [野孩子](#rogue)， 1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 野孩子，普狼，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 野孩子
+- id: template21
+  number: 21
+  name: 狼美人-预女猎白氓
+  lineup: 1 [狼美人](#wolf-beauty)， 3 [普狼](#werewolf)；3 [村民](#villager)，1 [老流氓](#satyr)， 1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+  order: 普狼和狼美人，狼美人，预言家，女巫，猎人，白痴，老流氓
+  blocks:
+  - role: 老流氓
+- id: template22
+  number: 22
+  name: 隐狼 - 预女猎鸦
+  lineup: 1 [隐狼](#mystic-wolf)， 3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [乌鸦](#crow)
+  order: 普狼，隐狼，预言家，女巫，乌鸦，猎人
+  blocks:
+  - role: 隐狼
+  - role: 乌鸦
+  toc: 隐狼-预女猎鸦
+- id: template23
+  number: 23
+  name: 隐狼、种狼 - 预女猎守
+  lineup: 1 [隐狼](#mystic-wolf)，1 [种狼](#stud-wolf)，2 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和种狼，隐狼，守卫，预言家，女巫，猎人，种狼
+  blocks:
+  - role: 种狼
+  toc: 隐狼、种狼-预女猎守
+- id: template24
+  number: 24
+  name: 狼外婆 - 预女猎红
+  lineup: 1 [狼外婆](#wolf-grandma)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [小红帽](#redhat)
+  order: 普狼和狼外婆，狼外婆，预言家，女巫，猎人，小红帽
+  blocks:
+  - role: 狼外婆
+  - role: 小红帽
+  toc: 狼外婆-预女猎红
+- id: template25
+  number: 25
+  name: 天狗 - 预女猎月
+  lineup: 1 [天狗](#tiangou)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [月女](#moon-girl)
+  order: 月女，普狼和天狗，天狗，预言家，女巫，猎人
+  blocks:
+  - role: 天狗
+  - role: 月女
+  toc: 天狗-预女猎月
+- id: template26
+  number: 26
+  name: 狐仙 - 预女猎阴
+  blocks:
+  - text: |-
+      **角色配置**：1 [狐仙](#huxian)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [阴阳使者](#yin-yang-master)
+      **行动顺序**：狐仙，普狼和狐仙，预言家，女巫，猎人，阴阳使者
+      **特殊说明**：本版型须设置第二现场，参见《法典》第二十七条。
+    class: lk-center lk-ink
+  - role: 狐仙
+  - role: 阴阳使者
+  toc: 狐仙-预女猎阴
+- id: template27
+  number: 27
+  name: 邪恶商人 - 预女猎守
+  lineup: 1 [邪恶商人](#devil-merchant)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和邪恶商人，邪恶商人，被「交易」的普狼，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 邪恶商人
+  toc: 邪恶商人-预女猎守
+- id: template28
+  number: 28
+  name: 魔狼 - 预女猎白
+  lineup: 1 [魔狼](#demon-wolf)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎魔人](#demon-hunter)，1 [白痴](#moron)
+  order: 普狼和魔狼，魔狼，预言家，女巫，猎魔人，白痴
+  blocks:
+  - role: 魔狼
+  - role: 猎魔人
+  toc: 魔狼-预女猎白
+- id: template29
+  number: 29
+  name: 血月使徒 - 预女猎白
+  lineup: 1 [血月使徒](#blood-moon)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎魔人](#demon-hunter)，1 [守卫](#guard)
+  order: 普狼和血月使徒，预言家，女巫，猎魔人，白痴
+  blocks:
+  - role: 血月使徒
+  toc: 血月使徒-预女猎白
+- id: template30
+  number: 30
+  name: 预花潜猎
+  lineup: 4 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [花蝴蝶](#butterfly)，1 [潜行者](#stalker)， 1 [猎人](#hunter)
+  order: 花蝴蝶，普狼，预言家，潜行者，猎人
+  blocks:
+  - role: 花蝴蝶
+- id: template31
+  number: 31
+  name: 狼兄、狼弟 - 预女猎商
+  blocks:
+  - text: |-
+      **角色配置**：1 [狼兄](#big-wolf-brother)，1 [狼弟](#little-wolf-brother)，2 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [黑市商人](#black-market-merchant)
+      **行动顺序**：狼兄和狼弟，普狼和狼兄，预言家，女巫，黑市商人，幸运儿，猎人
+      **特殊说明**：本版型须设置第二现场，参见《法典》第二十七条。
+    class: lk-center lk-ink
+  - role: 狼兄
+  - role: 狼弟
+  - role: black-market-merchant
+  toc: 狼兄、狼弟-预女猎商
+- id: template32
+  number: 32
+  name: 黑狼王 - 预女猎奇
+  lineup: 1 [黑狼王](#black-wolf-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [奇迹商人](#miracle-merchant)
+  order: 普狼和黑狼王，守卫，预言家，女巫，奇迹商人，幸运儿，猎人，黑狼王
+  blocks:
+  - role: 奇迹商人
+  toc: 黑狼王-预女猎奇
+- id: template33
+  number: 33
+  name: 大灰狼 - 预女猎占
+  lineup: 1 [大灰狼](#gray-wolf)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [占卜师](#fortune-teller)
+  order: 占卜师，普狼，大灰狼，预言家，女巫，猎人
+  blocks:
+  - role: 大灰狼
+  - role: 占卜师
+  toc: 大灰狼-预女猎占
+- id: template34
+  number: 34
+  name: 狼巫 - 纯女猎守
+  lineup: 1 [狼巫](#wolf-witch)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [纯白之女](#white-girl)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和狼巫，狼巫，守卫，纯白之女，女巫，猎人
+  blocks:
+  - role: 狼巫
+  - role: 纯白之女
+  toc: 狼巫-纯女猎守
+- id: template35
+  number: 35
+  name: 混沌之魔 - 预鹿审猎
+  lineup: 1 [混沌之魔](#chaos)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [灵鹿](#deer)，1 [审判官](#judge)，1 [猎人](#hunter)
+  order: 普狼和混沌之魔，混沌之魔，灵鹿，审判官，预言家，猎人
+  blocks:
+  - role: 混沌之魔
+  - role: 灵鹿
+  - role: 审判官
+  toc: 混沌之魔-预鹿审猎
+- id: template36
+  number: 36
+  name: 帝尊魔皇 - 预女猎天
+  lineup: 1 [帝尊魔皇](#monster-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [九天圣人](#saint)
+  order: 普狼，帝尊魔皇，九天圣人，预言家，女巫，猎人
+  blocks:
+  - text: |-
+      **异常状态：**
+      **「纯阳」状态**
+      处于「纯阳」状态的玩家白天不会以任何形式死亡。夜间开始时，处于「纯阳」状态的玩家立即复原。若处于「纯阳」状态的玩家于同一夜再次进入「纯阳」状态，则其死亡。若处于「纯阳」状态的玩家于同一夜进入「至阴」状态，则其立即复原。
+      **「至阴」状态**
+      处于「至阴」状态的玩家夜间不会以任何形式死亡。夜间开始时，处于「至阴」状态的玩家立即复原。若处于「至阴」状态的玩家于同一夜再次进入「至阴」状态，则其死亡。若处于「至阴」状态的玩家于同一夜进入「纯阳」状态，则其立即复原。
+    class: lk-ink
+  - role: 帝尊魔皇
+  - role: 九天圣人
+  toc: 帝尊魔皇-预女猎天
+- id: template70
+  number: 70
+  name: 寂夜导师 vs. 预女守白（别名：时波之乱）
+  lineup: 1寂夜导师，3普狼；4村民，1预言家，1女巫，1守卫，1白昼学者
+  order: 寂夜导师，白昼学者，普狼，守卫，预言家，女巫
+  blocks:
+  - text: '*冥昭瞢暗，谁能极之？*'
+    class: lk-center
+  - text: |-
+      **寂夜导师 · 狼 **
+      【觉醒】你不可以「自爆」。其他狼人全部死亡后，你获得技能【狼刀】。
+      【呼朋】夜间，其他狼人行动时，上帝告知这些狼人你的号码。
+      【晦明】全局游戏各限一次，夜间，你行动时，可以「增强」或「削弱」一名其他玩家。你不可以同时发动「增强」和「削弱」。
+    class: lk-ink
+  - text: '*明明暗暗，惟时何为？*'
+    class: lk-center
+  - text: |-
+      **白昼学者 · 神 **
+      【晦明】全局游戏各限一次，夜间，你行动时，可以「增强」或「削弱」一名其他玩家。你不可以同时发动「增强」和「削弱」。
+    class: lk-ink
+  - text: |-
+      注：「增强」和「削弱」对寂夜导师和白昼学者无效。其余玩家产生以下效果（仅当夜生效）：
+      （1）若神或普狼队伍成为一次或两次「增强」的目标，则该玩家（或队伍）夜间获得一个额外的行动轮次，女巫在此额外轮次中获得一瓶额外毒药，守卫的额外轮次不受连续守护限制。同一夜的两个轮次可以作用于同一目标。
+      （2）若神或普狼队伍成为一次或两次「削弱」的目标，则跳过该玩家（或队伍）夜间的行动轮次。
+      （3）若神或普狼队伍成为一次「增强」和一次「削弱」的目标，则行动轮次不受影响。
+      （4）若一名好人同时成为【晦明】的目标，则该玩家死亡。
+      （5）若普狼队伍同时成为【晦明】的目标，则寂夜导师死亡。
+    class: lk-ink
+  toc: 寂夜导师 vs. 预女守白
+- id: template71
+  number: 71
+  name: 无目之夜
+  lineup: 1普狼，1狼鸦之爪，1石像鬼，1隐狼；4村民，1预言家，1女巫，1猎人，1摄梦人
+  order: 摄梦人，石像鬼，普狼，狼鸦之爪，预言家，女巫，猎人
+  divider: false
+  blocks:
+  - text: '*凶猛如狼，智慧如鸦，我的利爪会撕碎一切！*'
+    class: lk-center
+  - text: |-
+      **狼鸦之爪 · 狼 **
+      **【**首领】你不可以成为「刀杀」对象，也不可以「自爆」。
+      【爪牙】游戏开始时，上帝告知普狼你的号码。两名或以上狼人死亡后，你获得技能【狼刀】和【双刀】。狼鸦之爪的【双刀】无视摄梦人的【织梦】。
+    class: lk-ink
+  - html: <p><font color="#000000">注：此版型中，隐狼可以得知其他存活狼人的身份。
+- divider_before: true
+  id: template72
+  number: 72
+  name: 假面 vs. 舞者
+  lineup: 1假面，3普狼；4村民，1预言家，1女巫，1白痴，1舞者
+  order: 舞者，假面，普狼，预言家，女巫
+  blocks:
+  - text: '*假面舞会！隐藏你的面容，这样世界就永远找不到你……*'
+    class: lk-center
+  - text: |-
+      **假面 · 狼**
+      【觉醒】你不可以「自爆」。其他狼人全部死亡后，你获得技能【狼刀】。
+      【神体】女巫的毒药对你无效。
+      【代面】从第二夜开始，夜间，你行动时，可以「查验」一名玩家，上帝告知你该玩家当夜是否进入「舞池」。然后，你可以选择一名玩家，若该玩家当夜进入「舞池」，则改变其在「舞池」中的「面具」。你不可以连续两夜「查验」同一名玩家，也不可以连续两夜改变同一名玩家的「面具」。
+    class: lk-ink
+  - text: '*假面舞会！纸面具在游行……*'
+    class: lk-center
+  - text: |-
+      **舞者 · 神 **
+      【神体】女巫的毒药对你无效。
+      【舞动】从第二夜开始，夜间，你行动时，必须选择三位尚未进入过「舞池」的存活玩家进入「舞池」，仅当夜生效，直至尚未进入过「舞池」的存活玩家不足三位为止。进入「舞池」的玩家获得与自己阵营相同的「面具」，夜晚结束时，若三位玩家中有一位与其余两位「面具」不同，则其死亡。若舞者进入「舞池」，则「舞池」中的玩家不会因为狼人的「刀杀」死亡。
+    class: lk-ink
+- id: template73
+  number: 73
+  name: 寻香魅影 vs. 预女猎守（别名：寻香识命）
+  lineup: 1寻香魅影，3普狼；4村民，1觉醒预言家，1女巫，1猎人，1守卫
+  order: 寻香魅影，普狼，守卫，预言家，女巫，猎人
+  blocks:
+  - text: '*我的香味有没有吸引你？*'
+    class: lk-center
+  - text: |-
+      **寻香魅影 · 狼 **
+      【觉醒】你不可以「自爆」。其他狼人全部死亡后，你获得技能【狼刀】。
+      【偶寻】游戏开始时，你随机得知一位普狼的号码。
+      【迷香】夜间，你行动时，可以指定两名存活玩家。下一个夜间开始前，若其中任意一名玩家死亡，则另一名玩家死亡，且你失去【迷香】。
+    class: lk-ink
+  - text: '*你们之中有坏人！*'
+    class: lk-center
+  - text: |-
+      **觉醒预言家 · 神 **
+      【神卜】夜间，你行动时，可以「查验」两名存活的玩家，上帝告知你被「查验」的玩家中是否有狼人。
+
+      注：猎人因【迷香】死亡时，不可以开枪。
+    class: lk-ink
+  toc: 寻香魅影 vs. 预女猎守
+- id: template74
+  number: 74
+  name: 觉醒之夜
+  lineup: 3普狼，1夜之贵族；4村民，1预言家，1女巫，1猎魔人，1觉醒愚者
+  order: 普狼和夜之贵族，夜之贵族，预言家，女巫，猎魔人，觉醒愚者
+  blocks:
+  - text: '*若有人服事我，就当跟从我；我在哪里，服事我的人也要在那里。*'
+    class: lk-center
+  - html: <p><font color="#000000"><b>夜之贵族 · 狼 &nbsp;</b></font><br><font color="#000000">【首领】你不可以成为「刀杀」对象，也不可以「自爆」。</font><br><font color="#000000">【契约】从第二夜开始，夜间，你单独行动时，若没有「夜仆」存活，则你可以选择一名其他存活玩家成为「夜仆」。下一个夜间结束时，若「夜仆」存活，则其死亡。
+  - text: '*其知可及也，其愚不可及也。*'
+    class: lk-center
+  - text: |-
+      **觉醒愚者 · 神 **
+      【代僵】你拥有一个「秘密之身」。若你被放逐且拥有「秘密之身」，则你可以翻开身份牌，免疫此次放逐，并失去「秘密之身」。夜间，你行动时，若你拥有「秘密之身」，则你可以「守护」一名玩家，若该玩家此时即将死亡，则其受到的第一个致死技能立即失效，且你失去「秘密之身」；若你未「守护」，或你「守护」的玩家仍存活，且你即将死亡，则你受到的第一个致死技能立即失效，且你失去「秘密之身」。
+
+      注：此版型中，若猎魔人「狩猎」的对象是「夜仆」，则【神狩】的效果改为立即解除其「夜仆」状态。
+    class: lk-ink
+- id: template75
+  number: 75
+  name: 猎日逐光
+  lineup: 3普狼，1蚀日侍女；4村民，1预言家，1女巫，1摄梦人，1流光伯爵
+  order: 蚀日侍女，流光伯爵，摄梦人，普狼，预言家，女巫
+  blocks:
+  - text: '*遮天蔽日！*'
+    class: lk-center
+  - text: |-
+      **蚀日侍女 · 狼 **
+      【魔尊】你不可以「自爆」。夜间，你单独行动时，上帝告知你其他存活的狼人号码。其他狼人全部死亡后，你获得技能【狼刀】。
+      【吞噬】从第二夜开始，夜间，你行动时，可以选择一名存活的好人玩家，若其是神，则其当晚技能失效，你继承该技能的状态并可以使用该技能，夜间结束时你失去该技能。你不可以选择先前已经选择过的对象。
+    class: lk-ink
+  - text: '*天光云影！*'
+    class: lk-center
+  - html: <p><font color="#000000"><b>流光伯爵 · 神&nbsp;</b></font><br><font color="#000000">【坚守】从第二夜开始，夜间，你行动时，可以「庇护」一名其他玩家，该玩家夜间不会以任何形式死亡。你不可以连续两夜「庇护」同一名玩家。</font><br><font color="#000000">【反噬】若你或你的「庇护」对象成为【吞噬】的目标，则蚀日侍女死亡。</font></p></font></p><p><font color="#000000">注：若蚀日侍女获得【坚守】，则当夜的「庇护」对象可以与上一夜或下一夜的「庇护」对象相同。</font></p>
+- id: template76
+  number: 76
+  name: 动物梦境
+  lineup: 3普狼，1狼美人；4羊驼（村民），1熊，1子狐，1河豚，1白猫
+  order: 子狐、普狼和狼美人、狼美人
+  blocks:
+  - text: '*豺狼当道，安问狐狸！*'
+    class: lk-center
+  - html: <p><font color="#000000"><b>子狐 · 神 &nbsp;</b></font><br><font color="#000000">【狐疑】全局游戏限一次，从第二夜开始，夜间你行动时，可以「迷惑」一名其他存活玩家。若该玩家属于狼人阵营，则当夜狼队无法使用【狼刀】；若该玩家是狼美人，其当夜无法使用【魔色】。
+  - text: '*人为刀俎，我为鱼肉。*'
+    class: lk-center
+  - html: <p><font color="#000000"><b>河豚 · 神&nbsp;</b></font><br><font color="#000000">【泄气】若你夜间被「刀杀」死亡，则你翻开身份牌，然后狼美人的【魔色】在当天白天失效。<br>【引爆】你在放逐阶段始终不可以投票给自己。全局游戏限一次，放逐投票后，若你成为至少一名玩家的投票对象，则你可以翻开身份牌，「击杀」所有投票给你的玩家。
+  - text: '*黑猫白猫，捕鼠好猫。*'
+    class: lk-center
+  - text: |-
+      **白猫 · 神  **
+      【跳梁】你即将死亡时，翻开身份牌，然后你于下一次放逐投票结束后死亡。
+
+      注：此版型中，狼人第一晚无法使用【狼刀】。
+    class: lk-ink

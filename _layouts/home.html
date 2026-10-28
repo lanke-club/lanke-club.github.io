@@ -1,0 +1,36 @@
+---
+layout: builder
+---
+{%- comment -%}
+  Home page. Edit the text in index.html's front matter: hero_title, hero_slogan, hero_text, qr_codes, poem.
+  (Avoid `name`/`title`-style keys Jekyll uses itself.)
+{%- endcomment -%}
+{%- capture logo %}{% include el/image.html src=page.logo %}{% endcapture -%}
+{%- capture hero_text -%}
+<h2 style="text-align: center;"><span style="color: #ffffff;"><strong>{{ page.hero_title }}</strong></span></h2>
+<h4 style="text-align: center;"><span style="color: #ffffff;"><strong>{{ page.hero_slogan }}</strong></span></h4>
+<p style="text-align: center;"><span style="color: #ffffff;"><strong>{{ page.hero_text }}</strong></span></p>
+{%- endcapture -%}
+{%- capture hero_widget %}{% include el/text.html class="lk-hero-text" html=hero_text %}{% endcapture -%}
+{%- capture cols -%}
+{% include el/column.html span=50 content=logo %}
+{% include el/column.html span=50 content=hero_widget %}
+{%- endcapture %}
+{% include el/section.html class="lk-hero" content=cols %}
+{%- capture cols -%}
+{%- for qr in page.qr_codes -%}
+{%- capture ws -%}
+{%- capture t %}<p style="text-align: center;">{{ qr.title }}</p>{% endcapture %}{% include el/text.html class="lk-qr-caption" html=t %}
+{% include el/image.html src=qr.image %}
+{%- capture t %}<p style="text-align: center;">{{ qr.caption }}</p>{% endcapture %}
+{% include el/text.html html=t %}
+{%- endcapture %}
+{% include el/column.html span=50 content=ws %}
+{%- endfor -%}
+{%- endcapture %}
+{% include el/section.html content=cols %}
+{%- capture poem %}<blockquote>{% assign lines = page.poem | split: "
+" %}{% for l in lines %}<p style="text-align: center;">{{ l }}</p>{% endfor %}</blockquote>{% endcapture -%}
+{%- capture ws %}{% include el/text.html html=poem %}{% endcapture -%}
+{%- capture col %}{% include el/column.html content=ws %}{% endcapture %}
+{% include el/section.html content=col %}

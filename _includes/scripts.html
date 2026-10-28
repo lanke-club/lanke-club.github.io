@@ -1,0 +1,15 @@
+<script>var astra = {"break_point":"921","isRtl":""};</script>
+<script src="/assets/vendor/astra/js/minified/frontend.min.js"></script>
+<script src="/assets/vendor/mystickymenu/detectmobilebrowser.js"></script>
+<script>var option = {"mystickyClass":"header.site-header","activationHeight":"0","disableWidth":"0","disableLargeWidth":"0","adminBar":"false","device_desktop":"1","device_mobile":"1","mystickyTransition":"fade","mysticky_disable_down":"false"};</script>
+<script src="/assets/vendor/mystickymenu/mystickymenu.min.js"></script>
+{%- if page.lightbox %}
+{%- comment -%} Elementor's runtime, only needed for the image lightbox. {%- endcomment %}
+<script src="/assets/vendor/elementor/js/webpack.runtime.min.js"></script>
+<script src="/assets/vendor/elementor/js/frontend-modules.min.js"></script>
+<script src="/assets/vendor/elementor/lib/waypoints/waypoints.min.js"></script>
+<script src="/assets/vendor/wordpress/js/jquery/ui/core.min.js"></script>
+<script>var elementorFrontendConfig = {% include elementor-config.json %};</script>
+<script src="/assets/vendor/elementor/js/frontend.min.js"></script>
+{%- endif %}
+<script src="/assets/js/video.js" defer></script>

@@ -1,0 +1,17 @@
+---
+layout: builder
+---
+{%- comment -%}
+  A 角色全册 chapter page, built from _data/rulebook/<page.chapter>.yml and _data/roles.yml.
+{%- endcomment -%}
+{%- assign ch = site.data.rulebook[page.chapter] -%}
+{% include rulebook/header.html title=ch.title size=ch.header_size divider=true %}
+{%- for name in ch.roles %}
+{%- capture ws %}{% include role-card.html name=name heading=true %}
+{% include el/divider.html %}{% endcapture -%}
+{%- capture col %}{% include el/column.html content=ws %}{% endcapture %}
+{% include el/section.html content=col %}
+{%- endfor %}
+{%- for s in ch.setups %}
+{% include rulebook/setup.html setup=s %}
+{%- endfor %}

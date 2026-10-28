@@ -1,0 +1,15 @@
+---
+layout: builder
+---
+{%- comment -%} A 角色全册 text page (基本原则): title header, then `parts` of {title, text (lk-text)}. {%- endcomment -%}
+{% include rulebook/header.html title=page.title size=page.header_size divider=true %}
+{%- for part in page.parts %}
+{%- assign t = part.text | lktext -%}
+{%- capture ws -%}
+{% include el/heading.html text=part.title tag="h3" class="lk-center" %}
+{% include el/text.html html=t %}
+{% include el/divider.html %}
+{%- endcapture -%}
+{%- capture col %}{% include el/column.html content=ws %}{% endcapture %}
+{% include el/section.html content=col %}
+{%- endfor %}

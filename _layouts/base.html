@@ -1,0 +1,67 @@
+{%- comment -%}
+  The page shell: <head>, header, footer and scripts. Every other layout builds on this one.
+  The theme's look depends on <body> classes; they are derived from the page's layout:
+    builder pages (home, roles, gallery…) → full-width page-builder template, no visible title
+    page → normal page with its title;  post/report → blog post;  archive → category listing
+{%- endcomment -%}
+{%- assign L = page.layout -%}
+{%- if L == "report" or L == "post" or L == "builder-post" -%}{%- assign kind = "post" -%}
+{%- elsif L == "archive" -%}{%- assign kind = "archive" -%}
+{%- elsif L == "page" -%}{%- assign kind = "page" -%}
+{%- else -%}{%- assign kind = "builder" -%}{%- endif -%}
+{%- if L == "post" or L == "page" or L == "archive" -%}{%- assign elementor = false -%}{%- else -%}{%- assign elementor = true -%}{%- endif -%}
+{%- capture theme_classes -%}wp-custom-logo wp-theme-astra{% if kind != "archive" %} ast-single-post{% endif %} ast-inherit-site-logo-transparent{% if page.transparent_header %} ast-theme-transparent-header{% endif %} ast-hfb-header ast-desktop {% if kind == "builder" %}ast-page-builder-template{% else %}ast-plain-container{% endif %} ast-no-sidebar astra-3.9.2{% if kind == "page" or kind == "post" %} ast-normal-title-enabled{% endif %} elementor-default elementor-kit-18{% if elementor %} elementor-page{% endif %}{%- endcapture -%}
+{%- case kind -%}
+  {%- when "post" -%}{%- capture body_class %}wp-singular post-template-default single single-post single-format-standard ast-blog-single-style-1 {{ theme_classes }}{% endcapture -%}
+  {%- when "archive" -%}{%- capture body_class %}archive{% if page.page_num > 1 %} paged{% endif %} category {{ theme_classes }}{% endcapture -%}
+  {%- else -%}{%- capture body_class %}{% if page.url == "/" %}home {% endif %}wp-singular page-template-default page {{ theme_classes }}{% endcapture -%}
+{%- endcase -%}
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.url == "/" %}{{ site.title }} &#8211; {{ site.tagline }}{% else %}{{ page.title }}{% if page.page_num > 1 %} &#8211; Page {{ page.page_num }}{% endif %} &#8211; {{ site.title }}{% endif %}</title>
+<style id="content-control-block-styles">{% include inline-css/content-control.css %}</style>
+<style id="wp-img-auto-sizes-contain-inline-css">{% include inline-css/img-auto-sizes.css %}</style>
+<link rel="stylesheet" href="/assets/vendor/astra/css/minified/frontend.min.css">
+<style id="astra-theme-css-inline-css">{% include inline-css/astra-{{ kind }}.css %}</style>
+<style id="wp-emoji-styles-inline-css">{% include inline-css/emoji.css %}</style>
+<link rel="stylesheet" href="/assets/vendor/wordpress/block-library.min.css">
+<link rel="stylesheet" href="/assets/vendor/content-control/style-block-editor.css">
+<style id="global-styles-inline-css">{% include inline-css/global-styles.css %}</style>
+{%- if elementor %}
+<link rel="stylesheet" href="/assets/vendor/elementor/lib/eicons/css/elementor-icons.min.css">
+<link rel="stylesheet" href="/assets/vendor/elementor/css/frontend.min.css">
+<link rel="stylesheet" href="/assets/vendor/elementor/lib/swiper/css/swiper.min.css">
+<link rel="stylesheet" href="/assets/vendor/elementor-kit/kit.css">
+<link rel="stylesheet" href="/assets/vendor/elementor-kit/global.css">
+{%- endif %}
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/vendor/essential-addons/general.min.css">
+{%- if elementor %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto">
+{%- endif %}
+{%- for css in page.extra_css %}
+<link rel="stylesheet" href="{{ css }}">
+{%- endfor %}
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<script src="/assets/vendor/wordpress/js/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/wordpress/js/jquery/jquery-migrate.min.js"></script>
+<link rel="icon" href="{{ site.logo }}">
+<link rel="apple-touch-icon" href="{{ site.logo }}">
+<style id="mystickymenu">{% include inline-css/mystickymenu.css %}</style>
+<style>{% include inline-css/recent-comments.css %}</style>
+</head>
+
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="{{ body_class | strip }}">
+{% include header.html %}
+<div id="content" class="site-content">
+<div class="ast-container">
+{{ content }}
+</div> <!-- ast-container -->
+</div><!-- #content -->
+{% include footer.html %}
+{% include scripts.html elementor=elementor %}
+</body>
+</html>

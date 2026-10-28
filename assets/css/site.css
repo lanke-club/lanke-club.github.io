@@ -1,0 +1,53 @@
+/*
+ * Site styles on top of the Astra theme and Elementor (assets/vendor/).
+ * Selectors use `.elementor .elementor-element.…` so they have the same strength as the
+ * per-element rules Elementor used to generate, and win over its defaults the same way.
+ */
+
+/* --- text helpers (add to any widget via `class:`) ----------------------------------- */
+.elementor .elementor-element.lk-center { text-align: center; }
+.elementor .elementor-element.lk-ink { color: #000000; }
+.lk-dim { color: #999999; }
+
+/* --- divider with the paw icon (_includes/el/divider.html) --------------------------- */
+.elementor .elementor-element.elementor-widget-divider { --divider-border-style: solid; --divider-color: #000; --divider-border-width: 1px; }
+.elementor .elementor-element.elementor-widget-divider .elementor-divider-separator { width: 100%; }
+.elementor .elementor-element.elementor-widget-divider .elementor-divider { padding-top: 15px; padding-bottom: 15px; }
+
+/* --- video (_includes/el/video.html) -------------------------------------------------- */
+.elementor .elementor-element.elementor-widget-video .elementor-wrapper { --video-aspect-ratio: 1.77777; }
+
+/* --- columns with a custom desktop width (column `width:`) --------------------------- */
+@media (min-width: 768px) {
+  .elementor .elementor-element.lk-col-width { width: var(--lk-col-width); }
+}
+
+/* --- role cards (_includes/role-card.html) ------------------------------------------- */
+.elementor .elementor-element.lk-role-icon { text-align: center; }
+.elementor .elementor-element.lk-role-icon img { width: 128px; }
+.elementor .elementor-element.lk-role-quote { text-align: center; }
+.elementor .elementor-element.lk-role-quote > .elementor-widget-container { margin: 0px 0px 0px 0px; }
+
+/* --- icon gallery (_layouts/gallery.html) --------------------------------------------- */
+.elementor .elementor-element.lk-gallery .gallery-item .gallery-caption { text-align: center; }
+
+/* --- home page (_layouts/home.html) --------------------------------------------------- */
+.elementor .elementor-element.lk-hero:not(.elementor-motion-effects-element-type-background),
+.elementor .elementor-element.lk-hero > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-color: var(--e-global-color-primary);
+  background-image: url("/wp-content/uploads/2021/03/wolf-3022813_1920.jpg");
+  background-position: center center;
+  background-size: initial;
+}
+.elementor .elementor-element.lk-hero { transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; }
+.elementor .elementor-element.lk-hero > .elementor-background-overlay { transition: background 0.3s, border-radius 0.3s, opacity 0.3s; }
+.elementor .elementor-element.lk-hero-text { text-align: left; color: #FFFFFF; font-family: "Roboto", Sans-serif; font-weight: 400; }
+.elementor .elementor-element.lk-hero-text > .elementor-widget-container { margin: 15px 0px 0px 0px; padding: 55px 55px 55px 55px; background-color: #3B86B699; }
+.elementor .elementor-element.lk-qr-caption { text-align: center; font-family: "Roboto", Sans-serif; font-weight: 400; }
+.elementor .elementor-element.lk-qr-caption > .elementor-widget-container { margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; }
+
+/* --- one-off colours ------------------------------------------------------------------ */
+.elementor .elementor-element.lk-near-black { color: #050505; }
+
+/* --- 角色全册 page header lines on most chapters ------------------------------------- */
+.elementor .elementor-element.lk-size-16 p { font-size: 16px; font-style: normal; font-weight: 400; }

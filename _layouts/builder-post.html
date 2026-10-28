@@ -1,0 +1,8 @@
+---
+layout: post
+---
+{%- comment -%} A post laid out with `sections:` (see _includes/sections.html). {%- endcomment -%}
+<div class="elementor" data-elementor-type="wp-post">
+{%- if page.sections %}{% include sections.html sections=page.sections %}{% endif %}
+{{ content }}
+</div>

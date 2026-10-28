@@ -1,0 +1,21 @@
+---
+layout: builder
+---
+{%- comment -%} 角色全册目录: generated from _data/rulebook_info.yml (chapter order) and the chapters. {%- endcomment -%}
+{% include rulebook/header.html title=page.title size=16 divider=false %}
+{%- capture h %}<a href="/角色全册基本原则/">基本原则</a>{% endcapture -%}
+{%- capture ws %}{% include el/heading.html text=h %}{% endcapture -%}
+{%- capture col %}{% include el/column.html content=ws %}{% endcapture %}
+{% include el/section.html content=col %}
+{%- for key in site.data.rulebook_info.chapters %}
+{%- assign ch = site.data.rulebook[key] -%}
+{%- capture h %}<a href="{{ ch.page }}">{{ ch.title }}</a>{% endcapture -%}
+{%- capture list -%}
+{%- for name in ch.roles %}<a href="{{ ch.page }}#{{ site.data.roles[name].anchor }}">{{ name }}</a>{% unless forloop.last %}<br/>{% endunless %}{% endfor -%}
+{%- for s in ch.setups %}第{% if s.number < 10 %}0{% endif %}{{ s.number }}号 – <a href="{{ ch.page }}#{{ s.toc_anchor | default: s.id }}">{{ s.toc | default: s.name }}</a>{% unless forloop.last %}<br/>{% endunless %}{% endfor -%}
+{%- endcapture -%}
+{%- capture ws %}{% include el/heading.html text=h %}
+{% include el/text.html html=list %}{% endcapture -%}
+{%- capture col %}{% include el/column.html content=ws %}{% endcapture %}
+{% include el/section.html content=col %}
+{%- endfor %}

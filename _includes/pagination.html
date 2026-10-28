@@ -1,0 +1,17 @@
+{%- comment -%} WordPress-style page numbers: first, last, current ±1, "…" for gaps. {%- endcomment -%}
+{%- assign cur = page.page_num -%}{%- assign last = page.pages.size -%}{%- assign items = "" -%}{%- assign dots = false -%}
+{%- if page.prev_url -%}{%- capture it %}<a class="prev page-numbers" href="{{ page.prev_url }}"><span class="ast-left-arrow">&larr;</span> Previous Page</a>{% endcapture %}{%- assign items = items | append: it | append: "@@" -%}{%- endif -%}
+{%- for p in page.pages -%}
+  {%- assign d = p.num | minus: cur | abs -%}
+  {%- if p.num == 1 or p.num == last or d <= 1 -%}
+    {%- assign dots = false -%}
+    {%- if p.num == cur -%}{%- capture it %}<span aria-current="page" class="page-numbers current">{{ p.num }}</span>{% endcapture -%}
+    {%- else -%}{%- capture it %}<a class="page-numbers" href="{{ p.url }}">{{ p.num }}</a>{% endcapture -%}{%- endif -%}
+    {%- assign items = items | append: it | append: "@@" -%}
+  {%- elsif dots == false -%}
+    {%- assign dots = true -%}{%- assign items = items | append: '<span class="page-numbers dots">&hellip;</span>@@' -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if page.next_url -%}{%- capture it %}<a class="next page-numbers" href="{{ page.next_url }}">Next Page <span class="ast-right-arrow">&rarr;</span></a>{% endcapture %}{%- assign items = items | append: it | append: "@@" -%}{%- endif -%}
+{%- assign parts = items | split: "@@" -%}{{ parts | join: "
+" }}

@@ -1,0 +1,19 @@
+{%- comment -%}
+  One role from _data/roles.yml: anchor, (heading,) icon, quote, rules.
+  include.name: the role's key;  include.heading: also show the name as a heading
+{%- endcomment -%}
+{%- assign lk_role = site.data.roles[include.name] -%}
+{% include el/anchor.html id=lk_role.anchor %}
+{%- if include.heading %}
+{% include el/heading.html text=include.name tag="h3" class="lk-center" %}
+{%- endif %}
+{%- if lk_role.icon %}
+{% include el/image.html src=lk_role.icon alt=include.name title=include.name class="lk-role-icon" %}
+{%- endif %}
+{%- capture lk_quote %}<p><em>{{ lk_role.quote }}</em></p>{% endcapture %}
+{% include el/text.html html=lk_quote class="lk-role-quote" %}
+{%- if lk_role.rules %}{% assign lk_rules = lk_role.rules | lktext %}
+{% include el/text.html html=lk_rules class="lk-ink" %}
+{%- else %}
+{% include el/text.html html=lk_role.rules_html %}
+{%- endif %}

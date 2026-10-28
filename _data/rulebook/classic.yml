@@ -1,0 +1,142 @@
+page: /classic-templates/
+title: 经典版型
+header_size: 16
+setups:
+- id: template1
+  number: 1
+  name: 预女猎白
+  lineup: 4 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+  order: 普狼，预言家，女巫，猎人，白痴
+- id: template2
+  number: 2
+  name: 预女猎白混
+  lineup: 4 [普狼](#werewolf)；3 [村民](#villager)，1 [混血儿](#mixblood)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [白痴](#moron)
+  order: 混血儿，普狼，预言家，女巫，猎人，白痴
+  blocks:
+  - role: 混血儿
+- id: template3
+  number: 3
+  name: 预女猎尾
+  lineup: 4 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [九尾妖狐](#nine-tails)
+  order: 普狼，预言家，女巫，猎人，九尾妖狐
+  blocks:
+  - role: 九尾妖狐
+- id: template4
+  number: 4
+  name: 白狼王 - 预女猎守
+  lineup: 1 [白狼王](#white-wolf-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和白狼王，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 白狼王
+  toc: 白狼王-预女猎守
+- id: template5
+  number: 5
+  name: 白狼王 - 预女骑守
+  lineup: 1 [白狼王](#white-wolf-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [骑士](#knight)，1 [守卫](#guard)
+  order: 普狼和白狼王，守卫，预言家，女巫，骑士
+  blocks:
+  - role: 骑士
+  toc: 白狼王-预女骑守
+- id: template6
+  number: 6
+  name: 黑狼王 - 预女猎守
+  lineup: 1 [黑狼王](#black-wolf-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和黑狼王，守卫，预言家，女巫，猎人，黑狼王
+  blocks:
+  - role: 黑狼王
+  toc: 黑狼王-预女猎守
+- id: template7
+  number: 7
+  name: 黑狼王 - 预女猎术
+  lineup: 1 [黑狼王](#black-wolf-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [魔术师](#magician)
+  order: 魔术师，普狼和黑狼王，预言家，女巫，猎人，黑狼王
+  blocks:
+  - role: 魔术师
+  toc: 黑狼王-预女猎术
+- id: template8
+  number: 8
+  name: 黑狼王 - 预女猎摄
+  lineup: 1 [黑狼王](#black-wolf-king)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [摄梦人](#dream-controller)
+  order: 摄梦人，普狼和黑狼王，预言家，女巫，猎人，黑狼王
+  blocks:
+  - role: 摄梦人
+  toc: 黑狼王-预女猎摄
+- id: template9
+  number: 9
+  name: 梦魇 - 预女猎守
+  blocks:
+  - anchor: nightmare
+  - text: |-
+      **角色配置**：1 [梦魇](#nightmare)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+      **行动顺序**：梦魇，普狼和梦魇，守卫，预言家，女巫，猎人
+    class: lk-center lk-ink
+  - image: /assets/img/roles/梦魇.png
+  - text: '*我就是你的噩梦。*'
+    class: lk-center
+  - text: |-
+      **梦魇** · 狼
+      【狼刀】夜间,你和其他存活的狼人行动时，可以「刀杀」一名存活的玩家。
+      【首领】你不可以成为「刀杀」对象，也不可以「自爆」。
+      【噩梦】夜间，你单独行动时，可以「恐惧」一名存活的玩家。若被「恐惧」的玩家是神，则上帝在其行动时告知其被「恐惧」，然后该神当夜不可以发动技能。若被「恐惧」的玩家是狼人，则上帝在狼人行动时告知所有狼人被「恐惧」的狼人号码，然后狼人当夜不可以「刀杀」任何玩家。你不可以连续两夜「恐惧」同一名玩家。
+
+      注: 即使被「恐惧」的神已经没有技能可以发动，上帝依然告知其被「恐惧」。
+    class: lk-ink
+  toc: 梦魇-预女猎守
+- id: template10
+  number: 10
+  name: 恶魔 - 预女猎守
+  lineup: 1 [恶魔](#demon)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和恶魔，恶魔，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 恶魔
+  toc: 恶魔-预女猎守
+- id: template11
+  number: 11
+  name: 黑蝙蝠 - 预女猎守
+  lineup: 1 [黑蝙蝠](#black-bat)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 黑蝙蝠，普狼和黑蝙蝠，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 黑蝙蝠
+  toc: 黑蝙蝠-预女猎守
+- id: template12
+  number: 12
+  name: 恶灵骑士 - 预女猎守
+  lineup: 1 [恶灵骑士](#devil-knight)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和恶灵骑士，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 恶灵骑士
+  toc: 恶灵骑士-预女猎守
+- id: template13
+  number: 13
+  name: 狼美人 - 预女猎守
+  lineup: 1 [狼美人](#wolf-beauty)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+  order: 普狼和狼美人，狼美人，守卫，预言家，女巫，猎人
+  blocks:
+  - role: 狼美人
+  toc: 狼美人-预女猎守
+- id: template14
+  number: 14
+  name: 狼美人 - 预女潜禁
+  lineup: 1 [狼美人](#wolf-beauty)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [潜行者](#stalker)，1 [禁言长老](#silencer)
+  order: 普狼和狼美人，狼美人，预言家，女巫，潜行者，禁言长老
+  blocks:
+  - role: 潜行者
+  - role: 禁言长老
+  toc: 狼美人-预女潜禁
+- id: template15
+  number: 15
+  name: 石像鬼 - 预女猎墓
+  lineup: 1 [石像鬼](#gargoyle)，3 [普狼](#werewolf)；4 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守墓人](#grave-keeper)
+  order: 石像鬼，普狼，预言家，女巫，猎人，守墓人
+  blocks:
+  - role: 石像鬼
+  - role: 守墓人
+  toc: 石像鬼-预女猎墓
+- id: template16
+  number: 16
+  name: 机械狼 - 通女猎守
+  blocks:
+  - html: '<p style="text-align: center;"><span style="color: #000000;"><strong>角色配置</strong>：1 </span><a href="/classic-templates/">机械狼</a>，3 <a href="/general-characters/">普狼</a>；4 <a href="/general-characters/">村民</a>，1 <a href="/classic-templates/">通灵师</a>，1 <a href="/general-characters/">女巫</a>，1 <a href="/general-characters/">猎人</a>，1 <a href="/general-characters/">守卫</a><br/><span style="color: #000000;"><strong>行动顺序</strong>：机械狼，普狼，守卫，通灵师，女巫，猎人，机械狼</span></p>'
+  - role: 机械狼
+  - role: 通灵师
+  toc: 机械狼-通女猎守

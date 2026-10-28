@@ -1,0 +1,22 @@
+---
+layout: base
+---
+{%- comment -%} A blog post: title, category/author line, content, previous/next links. {%- endcomment -%}
+<div id="primary" class="content-area primary">
+<main id="main" class="site-main">
+<article class="post type-post status-publish format-standard hentry ast-article-single" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+<div class="ast-post-format- ast-no-thumb single-layout-1">
+<header class="entry-header ast-no-thumbnail">
+<div class="ast-single-post-order">
+<h1 class="entry-title" itemprop="headline">{{ page.title }}</h1>{% include post-meta.html post=page %}</div>
+</header><!-- .entry-header -->
+<div class="entry-content clear" itemprop="text">
+{{ content }}</div><!-- .entry-content .clear -->
+</div>
+</article><!-- #post-## -->
+<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+<span class="screen-reader-text">Post navigation</span>
+<div class="nav-links">{% if page.previous %}<div class="nav-previous"><a href="{{ page.previous.url }}" rel="prev"><span class="ast-left-arrow">&larr;</span> Previous Post</a></div>{% endif %}{% if page.next %}<div class="nav-next"><a href="{{ page.next.url }}" rel="next">Next Post <span class="ast-right-arrow">&rarr;</span></a></div>{% endif %}</div>
+</nav>
+</main><!-- #main -->
+</div><!-- #primary -->

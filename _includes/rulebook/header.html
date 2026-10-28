@@ -1,0 +1,15 @@
+{%- comment -%} Title + "本版内容来自…" lines at the top of every 角色全册 page. {%- endcomment -%}
+{%- assign lk_info = site.data.rulebook_info -%}
+{%- capture lk_lines -%}
+{%- for lk_line in lk_info.header_lines %}<p><em>{{ lk_line }}</em></p>{% endfor -%}
+{%- endcapture -%}
+{%- capture lk_hws -%}
+{% include el/heading.html text=include.title class="lk-center" %}
+{%- if include.size == 16 %}{% assign lk_cls = "lk-center lk-size-16" %}{% else %}{% assign lk_cls = "lk-center" %}{% endif %}
+{% include el/text.html html=lk_lines class=lk_cls %}
+{%- if include.divider %}
+{% include el/divider.html %}
+{%- endif %}
+{%- endcapture -%}
+{%- capture lk_hcol %}{% include el/column.html content=lk_hws %}{% endcapture -%}
+{% include el/section.html content=lk_hcol %}

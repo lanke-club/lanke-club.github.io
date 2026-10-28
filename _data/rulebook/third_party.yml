@@ -1,0 +1,97 @@
+page: /third-party-templates/
+title: 第三方阵营版型
+header_size: 16
+setups:
+- id: template37
+  number: 37
+  name: 盗贼丘比特、预女猎禁
+  blocks:
+  - html: |-
+      <p style="text-align: center;"><span style="color: #000000;"><strong>角色配置</strong>：1 <a href="/third-party-templates/">盗贼</a>，1 <a href="/third-party-templates/">丘比特</a>; 4 <a href="/general-characters/">普狼</a>；4 <a href="/general-characters/">村民</a>，1 <a href="/general-characters/">预言家</a>，1 <a href="/general-characters/">女巫</a>，1 <a href="/general-characters/">猎人</a>，1 <a href="/classic-templates/">禁言长老</a></span><br/><span style="color: #000000;"><strong>行动顺序</strong>：盗贼，丘比特，情侣，普狼，预言家，女巫，禁言长老，猎人</span></p>
+      <p><span style="color: #000000;"><b>特殊说明：</b>游戏开始前，上帝按上述角色配置准备14张身份牌，然后从中随机抽取两张。若这两张牌中没有盗贼，不是两张普狼牌，也不是一张普狼牌和一张丘比特牌，则将此两张身份牌隐藏，并将其余12张身份牌分发给玩家。否则，上帝将此两张牌放回，重新随机抽取两张，直到满足前述要求。</span></p>
+  - role: 盗贼
+  - role: 丘比特
+  - text: |-
+      **胜负判定**：
+      （1） 若情侣均为好人，则丘比特属于好人阵营，游戏采用屠边规则，参见《法典》第十三条。
+      （2） 若情侣均为狼，则丘比特属于狼人阵营。在至少有一名狼或丘比特存活的情况下，若所有神或所有民全部死亡，则狼人阵营获胜。若所有狼和丘比特死亡，则好人阵营获胜。
+      （3）若情侣为一名狼和一名好人，则丘比特与情侣组成第三方阵营。在至少有一名非第三方狼存活的情况下，若所有神或所有民全部死亡，则狼人阵营获胜。若所有存活的玩家均为好人，则好人阵营获胜。若所有存活的玩家均为第三方，则第三方阵营获胜。
+    class: lk-ink
+- id: template38
+  number: 38
+  name: 咒狐
+  blocks:
+  - text: |-
+      **角色配置**：4 [普狼](#werewolf)；1 [咒狐](#mystic-fox)；3 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+      **行动顺序**：咒狐，普狼，守卫，预言家，女巫，猎人
+      **第三方阵营**：咒狐
+    class: lk-center lk-ink
+  - role: 咒狐
+  - text: |-
+      **胜负判定**：
+      （1）当所有神或所有民死亡时，若咒狐存活，则第三方阵营获胜，否则狼人阵营获胜。
+      （2）当所有狼死亡时，若咒狐存活，则第三方阵营获胜，否则好人阵营获胜。
+    class: lk-ink
+- id: template39
+  number: 39
+  name: 鬼魂新娘
+  blocks:
+  - text: |-
+      **角色配置**：4 [普狼](#werewolf)；1 [鬼魂新娘](#ghost-bride)；3 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+      **行动顺序**：鬼魂新娘和新郎，证婚人，普狼，守卫，预言家，女巫，猎人
+      **第三方阵营**：鬼魂新娘，新郎，证婚人
+    class: lk-center lk-ink
+  - role: 鬼魂新娘
+  - text: |-
+      **胜负判定**：
+      （1）在至少有一名非第三方狼存活的情况下，若所有神和第三方玩家死亡，或所有民和第三方玩家死亡，则狼人阵营获胜。
+      （2）若所有存活的玩家均为好人，则好人阵营获胜。
+      （3）若所有存活的玩家均为第三方，则第三方阵营获胜。
+    class: lk-ink
+- id: template40
+  number: 40
+  name: 吹笛者
+  blocks:
+  - text: |-
+      **角色配置**：4 [普狼](#werewolf)；1 [吹笛者](#piper)；3 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+      **行动顺序**：普狼，守卫，预言家，女巫，猎人，吹笛者
+      **第三方阵营**：吹笛者
+    class: lk-center lk-ink
+  - role: 吹笛者
+  - text: |-
+      **胜负判定**：
+      （1）若所有神死亡，或所有民死亡，且第三方阵营没有获胜，则狼人阵营获胜。
+      （2）若所有狼死亡，且第三方阵营没有获胜，则好人阵营获胜。
+      （3）若吹笛者存活，且某一时刻除吹笛者以外的所有存活玩家均处于「催眠」状态，则第三方阵营获胜。
+    class: lk-ink
+- id: template41
+  number: 41
+  name: 异形
+  blocks:
+  - text: |-
+      **角色配置**：4 [普狼](#werewolf)；1 [异形](#alien)；3 [村民](#villager)，1 [预言家](#seer)，1 [女巫](#witch)，1 [猎人](#hunter)，1 [守卫](#guard)
+      **行动顺序**：普狼和异形，异形，守卫，预言家，女巫，猎人
+      **第三方阵营**：异形
+    class: lk-center lk-ink
+  - role: 异形
+  - text: |-
+      **胜负判定**：
+      （1）若所有神和异形死亡，或所有民和异形死亡，则狼人阵营获胜。
+      （2）若所有狼和异形死亡，则好人阵营获胜。
+      （3）若异形成为唯一存活的玩家，则第三方阵营获胜。
+    class: lk-ink
+- id: template42
+  number: 42
+  name: 开膛手杰克
+  blocks:
+  - html: |-
+      <p style="text-align: center;"><span style="color: #000000;"><strong>角色配置</strong>：4 <a href="/general-characters/">普狼</a>；1 <a href="/third-party-templates/">开膛手杰克</a>；3 <a href="/general-characters/">村民</a>，1 <a href="/general-characters/">预言家</a>，1 <a href="/general-characters/">女巫</a>，1 <a href="/general-characters/">猎人</a>，1 <a href="/general-characters/">守卫</a></span><br/><span style="color: #000000;"><strong>行动顺序</strong>：开膛手杰克和帮凶，普狼，守卫，预言家，女巫，猎人</span>
+      <br/><span style="color: #000000;"><strong>第三方阵营</strong>：开膛手杰克，帮凶</span></p>
+      <span style="color: #000000;"><strong>特殊说明</strong>：本版型中，除身份牌以外，上帝必须另外准备六张标有「男性」和六张标有「女性」的性别牌。游戏开始前，每名玩家随机获得一张性别牌，并以其上的标注作为本局游戏内的「性别」。游戏内，任何玩家死亡后必须翻开其性别牌。</span>
+  - role: 开膛手杰克
+  - text: |-
+      **胜负判定**：
+      （1）若开膛手杰克或帮凶存活，且某一时刻所有非开膛手杰克的存活玩家均为相同「性别」，则第三方阵营获胜。
+      （2）在至少有一名非第三方狼存活的情况下，若所有神和开膛手杰克死亡，或所有村民和开膛手杰克死亡，且第三方阵营没有获胜，则狼人阵营获胜。
+      （3）若所有狼和开膛手杰克死亡，且第三方阵营没有获胜，则好人阵营获胜。
+    class: lk-ink

@@ -1,0 +1,33 @@
+{%- comment -%}
+  Renders a list of page-builder sections from data (see README "Custom page layouts").
+
+  sections:
+    - widgets: [...]                 # one full-width column, or:
+      columns:
+        - span: 50                   # 100 (default) or 50
+          width: 96.666              # optional desktop width in %
+          widgets: [...]
+  widgets (one key each):
+    - text: "lk-text"   (+ class: lk-center / lk-ink)
+    - html: "<p>raw html</p>"   (+ class)
+    - heading: "title"  (+ tag: h2|h3, class)
+    - image: /path.png  (+ alt, title, class)
+    - video: https://youtu.be/…  (+ cover: /image.jpg)
+    - divider: true
+    - anchor: some-id
+    - columns: [...]                 # a nested (inner) row
+{%- endcomment -%}
+{%- for lk_sec in include.sections -%}
+  {%- capture lk_cols -%}
+    {%- if lk_sec.columns -%}
+      {%- for lk_col in lk_sec.columns -%}
+        {%- capture lk_ws %}{% include widgets.html widgets=lk_col.widgets %}{% endcapture -%}
+        {% include el/column.html span=lk_col.span width=lk_col.width inner=include.inner content=lk_ws %}
+      {%- endfor -%}
+    {%- else -%}
+      {%- capture lk_ws %}{% include widgets.html widgets=lk_sec.widgets %}{% endcapture -%}
+      {% include el/column.html inner=include.inner content=lk_ws %}
+    {%- endif -%}
+  {%- endcapture -%}
+  {% include el/section.html inner=include.inner class=lk_sec.class content=lk_cols %}
+{%- endfor -%}

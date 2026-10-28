@@ -1,0 +1,9 @@
+{%- comment -%}
+  Image widget. Like WordPress, the first 3 images on a page load eagerly and later ones lazily
+  (sizes="auto, …" lets the browser pick a smaller file for small images).
+{%- endcomment -%}
+{%- assign lk_images = lk_images | default: 0 | plus: 1 -%}
+{%- assign lk_srcset = include.src | wp_srcset -%}
+{%- assign lk_w = include.src | wp_width -%}{%- assign lk_h = include.src | wp_height -%}
+{%- capture lk_inner %}<img{% if lk_images > 3 %} loading="lazy"{% endif %} decoding="async"{% if lk_w > 0 %} width="{{ lk_w }}" height="{{ lk_h }}"{% endif %} src="{{ include.src }}"{% if lk_srcset != "" %} srcset="{{ lk_srcset }}" sizes="{% if lk_images > 3 %}auto, {% endif %}(max-width: {{ lk_w }}px) 100vw, {{ lk_w }}px"{% endif %} alt="{{ include.alt }}"{% if include.title %} title="{{ include.title }}"{% endif %} />{% endcapture -%}
+{% include el/widget.html type="image" class=include.class inner=lk_inner %}

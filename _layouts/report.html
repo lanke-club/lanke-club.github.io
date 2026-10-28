@@ -1,0 +1,48 @@
+---
+layout: post
+---
+{%- comment -%}
+  A match report (赛报). Front matter:
+    honors:  lk-text for the left column (功勋 …)
+    awards:  lk-text for the right column (MVP, 鼓励奖, 升级榜 …)
+    videos:  list of {url, cover}; cover (an image shown until clicked) is optional
+    notes:   optional lk-text shown between the dividers, after the videos
+  Rarely needed:
+    format: top              older reports: columns as a separate row (default: nested)
+    column_widths: [50, 50]  desktop widths of the two columns in %
+    honors_class / awards_class / notes_class   (default "lk-center lk-ink"; "none" for plain)
+    honors_html / awards_html / notes_html      raw HTML instead of lk-text
+{%- endcomment -%}
+{%- assign text_class = "lk-center lk-ink" -%}
+{%- assign w1 = page.column_widths[0] -%}{%- assign w2 = page.column_widths[1] -%}
+{%- assign c1 = page.honors_class | default: text_class | remove: "none" -%}{%- assign c2 = page.awards_class | default: text_class | remove: "none" -%}{%- assign c3 = page.notes_class | default: text_class | remove: "none" -%}
+{%- capture col1 %}{% if page.honors %}{% assign t = page.honors | lktext %}{% else %}{% assign t = page.honors_html %}{% endif %}{% if t %}{% include el/text.html class=c1 html=t %}{% endif %}{% endcapture -%}
+{%- capture col2 %}{% if page.awards %}{% assign t = page.awards | lktext %}{% else %}{% assign t = page.awards_html %}{% endif %}{% if t %}{% include el/text.html class=c2 html=t %}{% endif %}{% endcapture -%}
+{%- assign nested = true -%}{%- if page.format == "top" -%}{%- assign nested = false -%}{%- endif -%}
+{%- capture columns -%}
+{% include el/column.html span=50 inner=nested width=w1 content=col1 %}
+{% include el/column.html span=50 inner=nested width=w2 content=col2 %}
+{%- endcapture -%}
+{%- capture media -%}
+{% include el/divider.html %}
+{%- for v in page.videos %}
+{% include el/video.html url=v.url cover=v.cover %}
+{%- endfor %}
+{%- if page.notes %}{% assign t = page.notes | lktext %}{% else %}{% assign t = page.notes_html %}{% endif %}
+{%- if t %}
+{% include el/text.html class=c3 html=t %}
+{%- endif %}
+{% include el/divider.html %}
+{%- endcapture -%}
+<div class="elementor" data-elementor-type="wp-post">
+{%- if nested %}
+{%- capture row %}{% include el/section.html inner=true content=columns %}{{ media }}{% endcapture -%}
+{%- capture col %}{% include el/column.html content=row %}{% endcapture %}
+{% include el/section.html content=col %}
+{%- else %}
+{% include el/section.html content=columns %}
+{%- capture col %}{% include el/column.html content=media %}{% endcapture %}
+{% include el/section.html content=col %}
+{%- endif %}
+</div>
+{{ content }}

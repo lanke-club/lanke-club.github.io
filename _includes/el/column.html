@@ -1,0 +1,7 @@
+{%- assign lk_span = include.span | default: 100 -%}
+{%- assign lk_body = include.content | strip -%}
+<div class="elementor-column elementor-col-{{ lk_span }} elementor-{% if include.inner %}inner{% else %}top{% endif %}-column elementor-element{% if include.width %} lk-col-width{% endif %}" data-element_type="column"{% if include.width %} style="--lk-col-width: {{ include.width }}%"{% endif %}>
+<div class="elementor-widget-wrap{% if lk_body != "" %} elementor-element-populated{% endif %}">
+{{ include.content }}
+</div>
+</div>

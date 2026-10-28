@@ -1,0 +1,25 @@
+{%- comment -%}
+  Renders menu items (from _data/menu.yml) in Astra's markup.
+  include.items: list of {title, url, children}; include.mobile: true for the mobile menu.
+  An item is "current" when its url is this page; its ancestors get current-menu-ancestor.
+{%- endcomment -%}
+{%- for item in include.items -%}
+  {%- assign descendants = "" -%}
+  {%- for c in item.children -%}
+    {%- assign descendants = descendants | append: "|" | append: c.url | append: "|" -%}
+    {%- for g in c.children -%}{%- assign descendants = descendants | append: "|" | append: g.url | append: "|" -%}{%- endfor -%}
+  {%- endfor -%}
+  {%- assign here = "|" | append: page.url | append: "|" -%}
+  {%- assign classes = "menu-item" -%}
+  {%- if descendants contains here -%}{%- assign classes = classes | append: " current-menu-ancestor" -%}{%- endif -%}
+  {%- if item.children -%}{%- assign classes = classes | append: " menu-item-has-children" -%}{%- endif -%}
+  {%- if item.url == page.url -%}{%- assign classes = classes | append: " current-menu-item" -%}{%- endif %}
+<li class="{{ classes }}"><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %} class="menu-link">{{ item.title }}</a>
+  {%- if item.children -%}
+<button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span><span class="ast-icon icon-arrow"></span></button>
+<ul class="sub-menu">
+{% include menu.html items=item.children mobile=include.mobile %}
+</ul>
+  {%- endif %}
+</li>
+{%- endfor %}

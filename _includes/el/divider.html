@@ -1,0 +1,9 @@
+{%- capture lk_inner -%}
+<div class="elementor-divider">
+<span class="elementor-divider-separator">
+<div class="elementor-icon elementor-divider__element">
+{% include el/paw.svg %}</div>
+</span>
+</div>
+{%- endcapture -%}
+{% include el/widget.html type="divider" class="elementor-widget-divider--view-line_icon elementor-view-default elementor-widget-divider--element-align-center" inner=lk_inner %}

@@ -1,0 +1,22 @@
+{%- comment -%} Renders a list of widgets (see sections.html for the format). {%- endcomment -%}
+{%- for lk_wd in include.widgets -%}
+  {%- if lk_wd.text -%}
+    {%- assign lk_t = lk_wd.text | lktext -%}
+    {% include el/text.html class=lk_wd.class html=lk_t %}
+  {%- elsif lk_wd.html -%}
+    {% include el/text.html class=lk_wd.class html=lk_wd.html %}
+  {%- elsif lk_wd.heading -%}
+    {% include el/heading.html text=lk_wd.heading tag=lk_wd.tag class=lk_wd.class %}
+  {%- elsif lk_wd.image -%}
+    {% include el/image.html src=lk_wd.image alt=lk_wd.alt title=lk_wd.title class=lk_wd.class %}
+  {%- elsif lk_wd.video -%}
+    {% include el/video.html url=lk_wd.video cover=lk_wd.cover %}
+  {%- elsif lk_wd.divider -%}
+    {% include el/divider.html %}
+  {%- elsif lk_wd.anchor -%}
+    {% include el/anchor.html id=lk_wd.anchor %}
+  {%- elsif lk_wd.columns -%}
+    {%- assign lk_inner_sections = "" | split: "" | push: lk_wd -%}
+    {% include sections.html sections=lk_inner_sections inner=true %}
+  {%- endif -%}
+{%- endfor -%}

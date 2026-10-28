@@ -1,0 +1,15 @@
+@media (max-width: 640px) {
+	.cc-hide-on-mobile {
+		display: none !important;
+	}
+}
+@media (min-width: 641px) and (max-width: 920px) {
+	.cc-hide-on-tablet {
+		display: none !important;
+	}
+}
+@media (min-width: 921px) and (max-width: 1440px) {
+	.cc-hide-on-desktop {
+		display: none !important;
+	}
+}

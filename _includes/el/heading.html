@@ -1,0 +1,3 @@
+{%- assign lk_tag = include.tag | default: "h2" -%}
+{%- capture lk_inner %}<{{ lk_tag }} class="elementor-heading-title elementor-size-default">{{ include.text }}</{{ lk_tag }}>{% endcapture -%}
+{% include el/widget.html type="heading" class=include.class inner=lk_inner %}

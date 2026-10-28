@@ -1,0 +1,25 @@
+title: 烂柯游艺社
+tagline: 打造北美最专业的狼人杀社团
+email: lanke.fun@gmail.com
+logo: /wp-content/uploads/2021/03/logo.png
+author: Lanke Official   # shown as "By …" under posts
+lang: en-US
+timezone: America/New_York
+future: true   # publish posts even if their date is later than today
+
+# Report archive: /category/<slug>/ and /category/<slug>/page/N/ (see _plugins/category_archives.rb)
+archives:
+  per_page: 10
+  categories:
+    league-reports: 联赛赛报
+    lanke-news: 烂柯新闻
+    圆月大会: 圆月大会
+    圆月大会/第二届圆月大会: 第二届圆月大会
+
+exclude: [README.md, Gemfile, Gemfile.lock, vendor, .github, tools]
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: report }
+  - scope: { path: "" }
+    values: { layout: page }

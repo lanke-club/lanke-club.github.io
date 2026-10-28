@@ -1,0 +1,8 @@
+# Shown under the title of every 角色全册 page.
+header_lines:
+  - 本版内容来自《烂柯游艺社狼人杀角色全册》
+  - "Version: 2.0.1"
+  - （本规则描述版权归烂柯游艺社所有，未经许可禁止转载）
+
+# Chapter order on the 目录 page (files in _data/rulebook/).
+chapters: [general, classic, extension, third_party, original]
