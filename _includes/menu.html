@@ -1,0 +1,8 @@
+<ul>
+{%- for item in include.items %}
+  <li{% if item.children %} class="has-sub"{% endif %}>
+    <a href="{{ item.url }}"{% if item.url contains '://' %} target="_blank" rel="noopener"{% endif %}{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    {%- if item.children %}{% include menu.html items=item.children %}{% endif %}
+  </li>
+{%- endfor %}
+</ul>

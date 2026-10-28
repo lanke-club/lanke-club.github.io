@@ -1,0 +1,24 @@
+# Top navigation. Each item has a title and a url; "children" makes a dropdown.
+- title: 首页
+  url: /
+- title: 资源中心
+  url: /资源中心/
+  children:
+    - title: 烂柯法典
+      url: /wp-content/uploads/2024/06/第二版狼人杀法典.pdf
+    - title: 烂柯游艺社角色全册
+      url: /character-catalog/
+      children:
+        - { title: 角色全册目录, url: /character-catalog/ }
+        - { title: 角色全册基本原则, url: /角色全册基本原则/ }
+        - { title: 通用角色, url: /general-characters/ }
+        - { title: 经典版型, url: /classic-templates/ }
+        - { title: 扩展版型, url: /extention-templates/ }
+        - { title: 第三方阵营版型, url: /third-party-templates/ }
+        - { title: 原创版型, url: /lanke-templates/ }
+    - title: 角色图标
+      url: /角色图标/
+- title: 烂柯小讲堂
+  url: https://www.zhihu.com/column/c_1158046349202284544
+- title: 第八届金狼杯
+  url: https://forested-chips-c85.notion.site/21779a8b59788011b00af0a842aa8435?pvs=143
